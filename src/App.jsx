@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
-import Home from "./Components/home";
+import Home from "./components/HomepAge";
 
 const About = () => <h2>Our About Us Page</h2>;
 
