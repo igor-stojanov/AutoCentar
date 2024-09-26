@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 
 const Home = () => <h2>Home Page</h2>;
+const About = () => <h2>Our About Us Page</h2>;
 const Contact = () => <h2>Contact Page</h2>;
 const Services = () => <h2>Our Services Page</h2>;
 
@@ -13,6 +14,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
       </Routes>

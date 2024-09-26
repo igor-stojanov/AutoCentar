@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/Header.css"; // Optional: Add styles here or inline
+import "../css/Header.css"; // Assuming you have the correct path for your CSS file
 
 const Header = () => {
   return (
@@ -8,7 +8,16 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <img
+                src="/polisbg.png"
+                alt="Logo"
+                style={{ maxHeight: "60px" }}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>

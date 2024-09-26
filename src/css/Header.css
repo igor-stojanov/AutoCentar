@@ -1,7 +1,9 @@
-/* Header.css */
 header {
-    background-color: #3e4194; /* Polis plava boja */
+    background-color: #f8f8f8; /* Same off-white background as the rest of the page */
     padding: 10px 0;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-style: italic;
   }
   
   nav ul {
@@ -15,18 +17,17 @@ header {
     margin: 0;
   }
   
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 18px;
-    position: relative; /* Needed for the underline */
-  }
+ nav ul li a {
+  color: #0000ff; /* Blue text */
+  text-decoration: none;
+  padding: 10px;
+  font-size: 30px; /* Increase font size */
+  position: relative;
+}
   
-  nav ul li a:hover,
-  nav ul li a:focus,
-  nav ul li a.active {
-    text-decoration: none;
+  nav ul li a:hover::after,
+  nav ul li a:focus::after {
+    width: 100%; /* Blue underline when hovering */
   }
   
   nav ul li a::after {
@@ -34,15 +35,14 @@ header {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: white;
+    background-color: #0000ff; /* Blue underline */
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
     transition: width 0.3s ease;
   }
   
-  nav ul li a:hover::after,
-  nav ul li a:focus::after {
-    width: 100%; /* White underline when hovering */
+  nav ul li a:hover::after {
+    width: 100%; /* Blue underline expands on hover */
   }
   
