@@ -2,11 +2,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Services from "./components/Services"; // Ensure the file exists
 
-const Home = () => <h2>Home Page</h2>;
 const About = () => <h2>Our About Us Page</h2>;
-const Contact = () => <h2>Contact Page</h2>;
-const Services = () => <h2>Our Services Page</h2>;
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services />} />{" "}
       </Routes>
     </Router>
   );
