@@ -6,8 +6,7 @@ import Header from "./components/Header";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Home from "./components/Welcome";
-
-const About = () => <h2>Our About Us Page</h2>;
+import About from "./components/AboutUs";
 
 const App = () => {
   return (
