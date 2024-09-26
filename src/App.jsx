@@ -1,17 +1,8 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import HomeSection from "./components/HomeSection";
-import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <HomeSection />
-      <Footer />
-    </div>
-  );
+  return <h1>Auto Centar Polis</h1>;
 }
 
 export default App;
