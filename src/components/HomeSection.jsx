@@ -6,7 +6,7 @@ function HomeSection() {
       <div className="main-home">
         <div className="home-inner-content">
           <div className="home-image">
-            <img src="/images/polis.png" alt="Auto Centar Polis" />
+            <img src="src/images/polis.png" alt="Auto Centar Polis" />
           </div>
         </div>
         <div className="home-inner-content">

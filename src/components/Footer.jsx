@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="main-footer">
         <div className="footer-logo">
-          <img src="images/polis.png" alt="Auto Centar Polis" />
+          <img src="src/images/polis.png" alt="Auto Centar Polis" />
         </div>
       </div>
       <nav className="footer-navbar">
