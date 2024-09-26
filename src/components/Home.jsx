@@ -1,4 +1,3 @@
-// Home.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Home.css"; // Custom CSS for the home page

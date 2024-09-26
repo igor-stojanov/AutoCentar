@@ -1,10 +1,11 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Header from "./components/Header";
-import Home from "./components/Home";
 import Contact from "./components/Contact";
-import Services from "./components/Services"; // Ensure the file exists
+import Services from "./components/Services";
+import Home from "./Components/home";
 
 const About = () => <h2>Our About Us Page</h2>;
 
