@@ -1,9 +1,16 @@
 header {
-  background-color: #f8f8f8;
-  padding: 10px 0;
+  position: fixed;  /* Fixes the header at the top */
+  top: 0;           /* Ensure the header stays at the top of the page */
+  left: 0;          /* Align header to the left */
+  width: 100%;      /* Ensure the header takes up the full width of the screen */
+  z-index: 1000;    /* Ensure the header is on top of other elements */
+  background-color: #f8f8f8; /* Same background color */
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
   font-family: 'Anton', sans-serif;
   font-weight: bold;
-  font-style: italic;
+  font-style: italic
 }
 
 nav ul {

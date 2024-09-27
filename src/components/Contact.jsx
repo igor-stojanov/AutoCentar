@@ -1,8 +1,71 @@
-// src/components/Contact.jsx
-import React from "react";
+import React, { useState } from "react"; // Make sure to import useState
 import "../css/Contact.css";
 
+import {
+  validateEmail,
+  validateName,
+  validateMessage,
+} from "../utils/validation";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [formStatus, setFormStatus] = useState("");
+
+  // Handle input change
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validateName(formData.name)) {
+      setFormStatus(
+        "Invalid name. Name must be 3-30 characters and contain only letters."
+      );
+      return;
+    }
+
+    if (!validateEmail(formData.email)) {
+      setFormStatus("Invalid email address.");
+      return;
+    }
+
+    if (!validateMessage(formData.message)) {
+      setFormStatus("Message must be at least 10 characters long.");
+      return;
+    }
+
+    // Validate form data
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus("Please fill in all fields.");
+      return;
+    }
+
+    // Simulate form submission
+    console.log("Form data submitted:", formData);
+
+    // Simulate successful submission
+    setFormStatus("Message submitted successfully!");
+
+    // Optionally clear the form
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>
@@ -26,20 +89,44 @@ const Contact = () => {
       {/* Contact Form */}
       <div className="contact-form">
         <h2>Send Us a Message</h2>
-        <form>
+
+        {/* Display form status */}
+        {formStatus && <p>{formStatus}</p>}
+
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>
-            <input type="text" placeholder="Your name" required />
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange} // Link to handleInputChange
+              placeholder="Your name"
+              required
+            />
           </div>
           <div className="form-group">
             <label>Email</label>
-            <input type="email" placeholder="Your email" required />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange} // Link to handleInputChange
+              placeholder="Your email"
+              required
+            />
           </div>
           <div className="form-group">
             <label>Message</label>
-            <textarea placeholder="Your message" required></textarea>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange} // Link to handleInputChange
+              placeholder="Your message"
+              required
+            ></textarea>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit">Submit</button> {/* Links to handleSubmit */}
         </form>
       </div>
 
