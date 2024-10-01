@@ -1,0 +1,72 @@
+header {
+  position: fixed;  /* Fixes the header at the top */
+  top: 0;           /* Ensure the header stays at the top of the page */
+  left: 0;          /* Align header to the left */
+  width: 100%;      /* Ensure the header takes up the full width of the screen */
+  z-index: 1000;    /* Ensure the header is on top of other elements */
+  background-color: #f8f8f8; /* Same background color */
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  font-style: italic
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: #0000ff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+  width: 100%;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #0000ff;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+      padding: 15px 0;
+      text-align: center; /* Center the header text */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack the navigation items vertically */
+      align-items: center; /* Center the navigation items */
+  }
+
+  nav ul li a {
+      font-size: 20px; /* Smaller font size for mobile */
+      padding: 8px; /* Adjust padding */
+  }
+}

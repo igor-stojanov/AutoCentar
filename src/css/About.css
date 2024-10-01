@@ -1,0 +1,107 @@
+/* src/components/About.css */
+.about-container {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-company, .mission, .team {
+    margin-bottom: 40px;
+  }
+  
+  h1, h2 {
+    color: #6b38fb;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 30%;
+  }
+  
+  .team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  .team-member h3 {
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Responsive Styles */
+  
+  /* For tablets and smaller screens */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 20px; /* Reduce padding on smaller screens */
+    }
+  
+    h1 {
+      font-size: 28px; /* Adjust heading size */
+    }
+  
+    h2 {
+      font-size: 24px; /* Adjust heading size */
+    }
+  
+    p {
+      font-size: 16px; /* Decrease paragraph font size */
+    }
+  
+    .team-members {
+      flex-direction: column; /* Stack team members vertically */
+      align-items: center;
+    }
+  
+    .team-member {
+      width: 80%; /* Increase the width of team members on smaller screens */
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* For mobile phones and very small screens */
+  @media (max-width: 480px) {
+    .about-container {
+      padding: 15px; /* Further reduce padding */
+    }
+  
+    h1 {
+      font-size: 24px; /* Smaller heading size for mobile */
+    }
+  
+    h2 {
+      font-size: 20px; /* Adjust heading size */
+    }
+  
+    p {
+      font-size: 14px; /* Further decrease paragraph font size */
+    }
+  
+    .team-member {
+      width: 90%; /* Full-width for very small screens */
+    }
+  
+    .team-member h3 {
+      font-size: 18px; /* Adjust team member name size */
+    }
+  
+    .team-member p {
+      font-size: 14px; /* Adjust team member position size */
+    }
+  }
+  

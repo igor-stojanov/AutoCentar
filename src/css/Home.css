@@ -1,0 +1,128 @@
+.home-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  background-color: #6b38fb;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #6b38fb;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta {
+  background-color: #6b38fb;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #6b38fb;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+      padding: 40px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .hero h1 {
+      font-size: 32px; /* Reduce font size */
+  }
+
+  .hero p {
+      font-size: 16px; /* Reduce font size */
+      margin-bottom: 30px;
+  }
+
+  .btn-primary {
+      padding: 8px 16px; /* Smaller buttons on mobile */
+      font-size: 14px;
+  }
+
+  .services-list {
+      flex-direction: column; /* Stack services vertically on smaller screens */
+      align-items: center;
+  }
+
+  .service-item {
+      width: 90%; /* Make service items take full width on mobile */
+      margin-bottom: 20px;
+  }
+
+  .services h2 {
+      font-size: 28px; /* Reduce font size for services heading */
+  }
+
+  .cta {
+      padding: 30px 10px; /* Reduce padding */
+  }
+
+  .cta p {
+      font-size: 16px; /* Reduce font size */
+  }
+
+  .btn-secondary {
+      padding: 8px 16px; /* Adjust button size */
+      font-size: 14px;
+  }
+}
